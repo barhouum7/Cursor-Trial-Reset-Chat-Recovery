@@ -123,5 +123,20 @@ However, **your data is never truly gone**:
 
 ---
 
+## Contributing
+
+Contributions are welcome! Feel free to submit Pull Requests.
+
+1. Fork the repository
+2. Create your feature branch (git checkout -b feature/AmazingFeature)
+3. Commit your changes (git commit -m 'Add some AmazingFeature')
+4. Push to the branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
+
+
 ## 📜 License
 This project is open-source and licensed under the [MIT License](LICENSE). Contributions, multi-platform adaptations (macOS/Linux), and feedback are welcome!
+
+
+## ⚠️ Disclaimer
+This tool is for educational purposes only. If you find the Cursor editor useful, please support the developers by purchasing a license.
