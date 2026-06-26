@@ -32,7 +32,9 @@ Cursor-Trial-Reset-Chat-Recovery/
 
 If your sidebars are currently empty, you can bypass Cursor's broken tracking layer entirely and parse out every single conversation tab, user prompt, AI response, and Composer session into a clean, searchable Markdown file.
 
-### Step 1: Locate your Historical Project Folder
+### Step 1: Locate your Historical Project Folder 
+*(Each folder represents a chat session tab on Cursor, so you can identify the folder name that corresponds to the chat session you want to recover)*
+
 1. Press `Win + R`, paste the path below, and hit **Enter**:
    ```text
    %APPDATA%\Cursor\User\workspaceStorage
