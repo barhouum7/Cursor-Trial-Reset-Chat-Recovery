@@ -1,4 +1,5 @@
 import os
+import platform
 import sqlite3
 import json
 import datetime
@@ -9,7 +10,16 @@ import datetime
 HISTORICAL_FOLDER = "YOUR_FOLDER_NAME_HERE"
 # ==============================================================================
 
-db_path = os.path.expandvars(fr"%APPDATA%\Cursor\User\workspaceStorage\{HISTORICAL_FOLDER}\state.vscdb")
+# Cross-platform path resolution engine
+current_os = platform.system()
+if current_os == "Windows":
+    base_path = os.path.expandvars(r"%APPDATA%\Cursor\User\workspaceStorage")
+elif current_os == "Darwin":  # macOS
+    base_path = os.path.expanduser("~/Library/Application Support/Cursor/User/workspaceStorage")
+else:  # Linux fallback
+    base_path = os.path.expanduser("~/.config/Cursor/User/workspaceStorage")
+
+db_path = os.path.join(base_path, HISTORICAL_FOLDER, "state.vscdb")
 output_path = os.path.expanduser("~/Desktop/Cursor_Complete_Chat_And_Responses.md")
 
 if not os.path.exists(db_path):
